@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <style>
+            body {background-color: rgb(13, 235, 42);}
+            h1   {color: blue;}
+            p    {color: rgb(14, 13, 13);}
+            h2   {color: black;}
+            h3   {color: darkgreen}
+            .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+            </style>
+    </head>
+
+<h1>Buttons</h1>
+<p id="demo">This webpage is made by Anshul Verma. It contains 9 buttons</p>
+<p id="demo"></p>
+<div class="grid-container">
+    <div class="grid-item"><button id="red" type="button">Red</button></div>
+    <div class="grid-item"><button id="green" type="button">Green</button></div>
+    <div class="grid-item"><button id="blue" type="button">Blue</button></div>
+    <div class="grid-item"><button type="button">10</button></div>
+    <div class="grid-item"><button type="button">20</button></div>
+    <div class="grid-item"><button type="button">30</button></div>
+    <div class="grid-item"><button id= "calibri" type="button">Calibri</button></div>
+    <div class="grid-item"><button id= "time" type="button">Times New Roman</button></div>
+    <div class="grid-item"><button id="arial" type="button">Arial</button></div>
+  </div>
+  <script>
+    document.getElementById("red").addEventListener("click", REDbutton);
+    
+    function REDbutton() {
+      document.getElementById("demo").style.color="red";}
+      
+    document.getElementById("green").addEventListener("click", GREENbutton);
+    
+    function GREENbutton() {
+      document.getElementById("demo").style.color="green";}
+
+    document.getElementById("blue").addEventListener("click", BLUEbutton);
+    
+    function BLUEbutton() {
+      document.getElementById("demo").style.color="blue";
+    }
+
+    document.getElementById("calibri").addEventListener("click", CALIBRIbutton);
+    
+    function CALIBRIbutton() {
+      document.getElementById("demo").style.font="italic bold 20px calibri,serif";}
+    
+    document.getElementById("time").addEventListener("click", TIMEbutton);
+    
+    function TIMEbutton() {
+      document.getElementById("demo").style.font="italic bold 20px times new roman,serif";}
+      
+    document.getElementById("arial").addEventListener("click", ARIALbutton);
+    
+    function ARIALbutton() {
+      document.getElementById("demo").style.font="italic bold 20px arial,serif";}
+  </script>
+ 
+</body>
+</html>
