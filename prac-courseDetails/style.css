@@ -1,0 +1,125 @@
+html{
+	display: grid;
+	place-items: center;
+	width: 100vw;
+	overflow-x: hidden;
+}
+body{
+	display: block;
+	margin: 0;
+	padding: 50px 0px 20px 0px;
+	width: 80vw;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: rgb(255, 253, 250);
+}
+h1{ font-size: 3rem; }
+h2{ font-size: 2em; }
+h3{ font-size: 1.5em; }
+h1,h2,h3 {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+p{
+	font-size: 1em;
+	padding: 0;
+}
+hr {
+	background-color: rgb(71, 71, 71);
+	height: 2%px;
+	margin: 30px 0 30px 0;
+	width: 10%;
+}
+ul {
+	margin-left: -10px;
+}
+section { padding: 5px 0 5px 0;}
+
+header {
+	display: grid;
+	grid-template-rows: [r1] auto [r2] auto [r3] auto [r4];
+	grid-template-columns: [first] 15vw [middle] auto [end];
+}
+header>.logo {
+	display: block;
+	width: 12vw;
+	align-self: center;
+	grid-row-start: r1;
+  grid-row-end: r4;
+}
+header>h3 { margin-bottom: 15px;}
+header>h2 { margin-top: 10px;}
+
+.basic-details { padding: 15px 0 5px 0;}
+.basic-details>p{ 
+	margin: 20px 0 20px 0;
+	text-align: justify;
+}
+
+.papers {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: [first] 50% [middle] 50% [end];
+}
+.papers-heading {
+	display: block;
+	grid-column-start: first;
+  grid-column-end: end;
+	margin-bottom: 15px;
+}
+.papers>div {
+	display: block;
+	margin: 0px;
+	padding: 30px 40px;
+	border-radius: 10px;
+	border: 1px solid rgb(71, 71, 71);
+}
+.papers>div>ul>li>ul>h4 {
+	font-size: 1.1em;
+	margin-bottom: 5px;
+}
+.papers>div>ul>li>ul {
+	list-style: disc;
+	margin-left: -30px;
+}
+.papers>div>ul>li>ul>li>p {
+	margin: 5px;
+}
+
+.future-possibilities>ul>li>ul>h3,
+.future-possibilities>ul>li{
+	margin: 20px 0 10px -20px;
+}
+
+#btn { display: none;}
+
+footer>p{
+	font-style: italic;
+}
+
+@media only screen and (max-width: 900px) {
+	body{ width: 75vw;}
+	h1{ font-size: 2.2rem; }
+	h2{ font-size: 1.2em; }
+	h3{ font-size: 1em; }
+	header { grid-template-columns: [first] 20vw [middle] auto [end];}
+	header>.logo { width: 15.5vw;}
+	.papers {
+		display: block;
+	}
+	.papers>div {
+		margin: 30px 0 30px 0;
+		padding: 30px 30px;
+	}
+	ul {
+		margin-left: -15px;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	header{ display: block;}
+	header>.logo { 
+		margin-bottom: 20px;
+		width: 100px;
+	}
+}
